@@ -34,6 +34,11 @@ class User extends Authenticatable
         return $this->hasMany(SocialAccount::class);
     }
 
+    public function github()
+    {
+        return SocialAccount::where(['user_id'=>$this->id, 'type'=>'github'])->first();
+    }
+
     public function creatorOf()
     {
         return $this->hasMany(Project::class, 'creator');
