@@ -12,8 +12,9 @@
 */
 
 Route::get('/', 'PageController@home');
+Route::get('/home', 'PageController@home');
 
- Route::auth();
+Route::auth();
 
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
@@ -31,17 +32,3 @@ Route::get('/test', function() {
     dd(Auth::user());
     dd(Socialite::driver('github')->user());
 });
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
