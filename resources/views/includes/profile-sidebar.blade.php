@@ -22,7 +22,7 @@
             @endif
             <ul>
             @foreach(auth()->user()->projects as $project)
-                <li>{{ $project->title }}</li>
+                <li><a href="{{ url('projects/'.$project->id) }}">{{ $project->title }}</a></li>
             @endforeach
             </ul>
         </div>
