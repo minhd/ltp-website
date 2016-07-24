@@ -14,8 +14,8 @@ class CreateProjectUpdatesTable extends Migration
     {
         Schema::create('project_updates', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
-            $table->integer('project_id');
+            $table->integer('user_id')->nullable()->index();
+            $table->integer('project_id')->index();
             $table->text('content');
             $table->timestamps();
         });
