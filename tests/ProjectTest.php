@@ -10,6 +10,7 @@ use LTP\User;
 class ProjectTest extends TestCase
 {
     use DatabaseTransactions;
+    use DatabaseMigrations;
 
     public function test_project_creation()
     {
