@@ -15,7 +15,7 @@
 
                             <div class="form-group {{ $errors->has('title') ? "has-error" : "" }}">
                                 <label for="title" class="col-sm-2">Title</label>
-                                <input type="text" class="form-control" name="title" placeholder="Project Title" required value="{{ $project->title }}">
+                                <input type="text" class="form-control" name="title" placeholder="Project Title" required value="{{ old('title', $project->title) }}">
                                 {!! $errors->first('title', '<span class="help-block">:message</span>') !!}
                             </div>
 
