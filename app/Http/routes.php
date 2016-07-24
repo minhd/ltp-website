@@ -16,7 +16,7 @@ Route::get('/home', 'PageController@home');
 
 Route::model('projects', \LTP\Project::class);
 Route::resource('projects', 'ProjectController');
-
+Route::get('join/{projects}', 'UserController@join');
 
 Route::auth();
 

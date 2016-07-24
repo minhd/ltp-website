@@ -8,7 +8,11 @@
             {{ $project->description }}
         </div>
         <div class="panel-body">
-
+            @if (!in_array(auth()->user()->id, $project->contributors->pluck('pivot')->pluck('user_id')->all()))
+                <a href="{{ url('join/'.$project->id) }}">Join</a>
+            @else
+                <span class="text-muted"><i class="glyphicon glyphicon-check"></i>Joined</span>
+            @endif
         </div>
     </div>
 @endforeach
