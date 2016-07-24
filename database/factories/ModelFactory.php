@@ -20,10 +20,22 @@ $factory->define(LTP\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(LTP\SocialAccount::class, function(Faker\Generator $faker) {
+    return [
+        'type' => 'github',
+        'user_id' => factory(LTP\User::class)->create()->id,
+        'username' => $faker->userName,
+        'name' => $faker->name,
+        'identifier' => str_random(10),
+        'email' => $faker->email,
+        'avatar' => "https://s3.amazonaws.com/uifaces/faces/twitter/mbilderbach/128.jpg"
+    ];
+});
+
 $factory->define(LTP\Project::class, function (Faker\Generator $faker) {
     return [
-        'title' => $faker->words,
-        'description' => $faker->paragraphs(10),
+        'title' => $faker->words(5, true),
+        'description' => $faker->paragraphs(7, true),
         'creator' => factory(LTP\User::class)->create()->id
     ];
 });

@@ -33,6 +33,12 @@ Route::group(['prefix'=> 'api'], function() {
 });
 
 Route::get('/test', function() {
-    dd(Auth::user());
-    dd(Socialite::driver('github')->user());
+//    dd(Auth::user());
+//    dd(Socialite::driver('github')->user());
+    $project = LTP\Project::find(1);
+    for ($i = 0; $i <10; $i++) {
+        $userID = factory(LTP\SocialAccount::class)->create()->user_id;
+        $user = LTP\User::find($userID);
+        $user->participate($project);
+    }
 });

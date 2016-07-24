@@ -6,6 +6,11 @@
         <div class="panel-heading">{{ $project->title }}</div>
         <div class="panel-body">
             {{ $project->description }}
+            <hr>
+            <p>Members: {{ count($project->contributors) }}</p>
+            @foreach($project->contributors as $user )
+            <img src="{{ $user->github()->avatar }}" class="img-circle img-responsive img-thumbnail" style="width:40px;"/>
+            @endforeach
         </div>
         @if (auth()->user())
             <div class="panel-body">

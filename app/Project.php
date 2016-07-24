@@ -13,6 +13,11 @@ class Project extends Model
         return $this->belongsTo(User::class, 'creator');
     }
 
+    public function isOwnedBy($userID)
+    {
+        return $this->creator == $userID;
+    }
+
     public static function from(User $user)
     {
         $project = new static;

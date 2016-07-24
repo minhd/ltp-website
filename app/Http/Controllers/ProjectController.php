@@ -52,5 +52,22 @@ class ProjectController extends Controller
         return redirect('projects/'.$project->id);
     }
 
+    public function edit(Project $project)
+    {
+        return view('project/edit', compact('project'));
+    }
+
+    public function update(Project $project, Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'description' => 'required',
+        ]);
+
+        $project->update($request->all());
+
+        return back();
+    }
+
 
 }
