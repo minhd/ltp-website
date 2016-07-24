@@ -7,5 +7,8 @@
         <div class="panel-body">
             {{ $project->description }}
         </div>
+        <div class="panel-body">
+
+        </div>
     </div>
 @endforeach

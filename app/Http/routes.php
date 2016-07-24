@@ -14,6 +14,10 @@
 Route::get('/', 'PageController@home');
 Route::get('/home', 'PageController@home');
 
+Route::model('projects', \LTP\Project::class);
+Route::resource('projects', 'ProjectController');
+
+
 Route::auth();
 
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
@@ -24,7 +28,7 @@ Route::group(['prefix'=> 'api'], function() {
       return \LTP\User::all()->load('accounts')->load('projects')->load('creatorOf');
     });
     Route::get('projects', function() {
-        return \LTP\Project::all()->load('updates');
+        return \LTP\Project::all()->load('updates')->load('contributors');
     });
 });
 

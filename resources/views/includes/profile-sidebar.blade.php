@@ -11,7 +11,7 @@
             <img src="{{ auth()->user()->github()->avatar }}" alt="" class="img-circle img-responsive img-thumbnail" style="width:40px;">
         </div>
         <div class="panel-body">
-            <a href="" class="btn btn-primary">Create New Project</a>
+            <a href="{{ url('projects/create') }}" class="btn btn-primary">Create New Project</a>
         </div>
     </div>
     <div class="panel panel-default">
