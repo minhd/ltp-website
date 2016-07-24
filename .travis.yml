@@ -13,13 +13,8 @@ matrix:
 
 before_script:
   - cp .env.travis .env
-  - travis_retry composer self-update
-  - travis_retry composer install --prefer-source --no-interaction --dev
+  - composer self-update 
+  - composer install --no-interaction 
 
-before_install:
-  - composer require phpunit/phpunit:4.8.* satooshi/php-coveralls:1.*
-  - composer install --dev --prefer-source --no-interaction
-  - php artisan key:generate
- 
 script:
   - ./vendor/bin/phpunit 
