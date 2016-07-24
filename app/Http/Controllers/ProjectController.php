@@ -2,6 +2,7 @@
 
 namespace LTP\Http\Controllers;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Http\Request;
 
 use LTP\Http\Requests;

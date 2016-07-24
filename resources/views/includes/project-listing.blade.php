@@ -5,7 +5,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">{{ $project->title }}</div>
         <div class="panel-body">
-            {{ $project->description }}
+            {!! Markdown::convertToHtml($project->description) !!}
             <hr>
             <p>Members: {{ count($project->contributors) }}</p>
             @foreach($project->contributors as $user )

@@ -160,6 +160,8 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+
     ],
 
     /*
@@ -207,6 +209,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class
 
     ],
 

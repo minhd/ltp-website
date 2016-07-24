@@ -14,9 +14,8 @@
                     @endif
 
                     <div class="panel-body">
-                        {{ $project->description }}
+                        {!! Markdown::convertToHtml($project->description) !!}
                     </div>
-
 
                 </div>
             </div>
