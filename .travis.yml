@@ -17,7 +17,8 @@ before_script:
 
 before_install:
   - composer require phpunit/phpunit:4.8.* satooshi/php-coveralls:1.*
-  - composer install --dev
+  - composer install --dev --prefer-source --no-interaction
+  - php artisan key:generate
  
 script:
   - ./vendor/bin/phpunit 
