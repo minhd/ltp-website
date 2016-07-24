@@ -20,9 +20,15 @@
             @if(count(auth()->user()->projects) == 0)
                 Join a project to start contributing
             @endif
-            <ul>
+
+            <ul class="list-group">
             @foreach(auth()->user()->projects as $project)
-                <li><a href="{{ url('projects/'.$project->id) }}">{{ $project->title }}</a></li>
+                <li class="list-group-item">
+                    <a href="{{ url('projects/'.$project->id) }}">{{ $project->title }}</a>
+                    @if($project->creator == auth()->user()->id)
+                        Creator
+                    @endif
+                </li>
             @endforeach
             </ul>
         </div>
