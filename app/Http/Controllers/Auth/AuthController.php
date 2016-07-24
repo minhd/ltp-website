@@ -126,6 +126,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return back();
+        // redirect to the home page
+        return redirect('/');
     }
 }
