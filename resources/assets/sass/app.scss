@@ -1,2 +1,55 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$primary-color: #252839;
+$secondary-color: #f2b632;
+$body-bg: #b5b5b7;
 
+body {
+    background: $body-bg;
+}
+
+.jumbotron {
+    background-color: $body-bg;
+}
+
+blockquote {
+    border: none;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.navbar-tlp {
+    border-radius: 0;
+    margin-bottom: 0;
+    background: $primary-color;
+    height: 81px;
+    a {
+        color: white;
+    }
+    .navbar-brand {
+        font-family: 'Lobster', cursive;
+        font-size: 32px;
+        color: $secondary-color;
+        line-height: 50px;
+    }
+    .navbar-right {
+        margin-top:15px;
+        font-size:15px;
+        li a {
+            &:hover, &:focus {
+                background: $primary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+.btn-black {
+    background: black;
+    color: white;
+    padding: 15px 40px;
+    &:hover, &:focus {
+        color: white;
+    }
+}

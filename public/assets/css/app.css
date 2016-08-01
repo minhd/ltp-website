@@ -1,0 +1,39 @@
+body {
+  background: #b5b5b7; }
+
+.jumbotron {
+  background-color: #b5b5b7; }
+
+blockquote {
+  border: none; }
+
+section {
+  padding: 20px 0; }
+
+.navbar-tlp {
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #252839;
+  height: 81px; }
+  .navbar-tlp a {
+    color: white; }
+  .navbar-tlp .navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    color: #f2b632;
+    line-height: 50px; }
+  .navbar-tlp .navbar-right {
+    margin-top: 15px;
+    font-size: 15px; }
+    .navbar-tlp .navbar-right li a:hover, .navbar-tlp .navbar-right li a:focus {
+      background: #252839;
+      color: #f2b632; }
+
+.btn-black {
+  background: black;
+  color: white;
+  padding: 15px 40px; }
+  .btn-black:hover, .btn-black:focus {
+    color: white; }
+
+/*# sourceMappingURL=app.css.map */

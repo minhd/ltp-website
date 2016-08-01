@@ -17,54 +17,54 @@ return [
 
     'default' => env('QUEUE_DRIVER', 'sync'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Queue Connections
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the connection information for each server that
-    | is used by your application. A default configuration has been added
-    | for each back-end shipped with Laravel. You are free to add more.
-    |
-    */
+/*
+|--------------------------------------------------------------------------
+| Queue Connections
+|--------------------------------------------------------------------------
+|
+| Here you may configure the connection information for each server that
+| is used by your application. A default configuration has been added
+| for each back-end shipped with Laravel. You are free to add more.
+|
+*/
 
-    'connections' => [
+'connections' => [
 
-        'sync' => [
-            'driver' => 'sync',
-        ],
-
-        'database' => [
-            'driver' => 'database',
-            'table' => 'jobs',
-            'queue' => 'default',
-            'expire' => 90,
-        ],
-
-        'beanstalkd' => [
-            'driver' => 'beanstalkd',
-            'host' => 'localhost',
-            'queue' => 'default',
-            'ttr' => 90,
-        ],
-
-        'sqs' => [
-            'driver' => 'sqs',
-            'key' => 'your-public-key',
-            'secret' => 'your-secret-key',
-            'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
-            'queue' => 'your-queue-name',
-            'region' => 'us-east-1',
-        ],
-
-        'redis' => [
-            'driver' => 'redis',
-            'connection' => 'default',
-            'queue' => 'default',
-            'expire' => 90,
-        ],
-
+    'sync' => [
+        'driver' => 'sync',
     ],
+
+    'database' => [
+        'driver' => 'database',
+        'table' => 'jobs',
+        'queue' => 'default',
+        'expire' => 90,
+    ],
+
+    'beanstalkd' => [
+        'driver' => 'beanstalkd',
+        'host' => 'localhost',
+        'queue' => 'default',
+        'ttr' => 90,
+    ],
+
+    'sqs' => [
+        'driver' => 'sqs',
+        'key' => 'your-public-key',
+        'secret' => 'your-secret-key',
+        'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
+        'queue' => 'your-queue-name',
+        'region' => 'us-east-1',
+    ],
+
+    'redis' => [
+        'driver' => 'redis',
+        'connection' => 'default',
+        'queue' => 'default',
+        'expire' => 90,
+    ],
+
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -78,8 +78,8 @@ return [
     */
 
     'failed' => [
-        'database' => env('DB_CONNECTION', 'mysql'),
-        'table' => 'failed_jobs',
-    ],
+    'database' => env('DB_CONNECTION', 'mysql'),
+    'table' => 'failed_jobs',
+],
 
 ];

@@ -10,14 +10,17 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+
+ <link href="/assets/css/app.css" rel="stylesheet">
 
 </head>
-<body id="app-layout">
-    <nav class="navbar navbar-default">
+<body>
+
+    <nav class="navbar navbar-tlp">
         <div class="container">
             <div class="navbar-header">
 
@@ -31,18 +34,17 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Learn Team Programming
+                    learnTeamProgramminG
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Projects</a></li>
-                </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="{{ url('/home') }}">Projects</a></li>
+
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/auth/github') }}">Login with GitHub</a></li>
